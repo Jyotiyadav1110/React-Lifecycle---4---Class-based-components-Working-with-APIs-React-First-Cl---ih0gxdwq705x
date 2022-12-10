@@ -1,3 +1,4 @@
+
 import React from 'react'
 import '../styles/App.css';
 
@@ -12,6 +13,9 @@ class App extends React.Component{
     this.handleClick = this.handleClick.bind(this)
   }
 
+  shouldComponentUpdate(){
+    return this.state.count%2 === 1;
+  }
 
   render(){
     console.log(`Rendering with count:-${this.state.count}`)
